@@ -25,7 +25,7 @@ public class Gym {
         
         @JsonIgnore
         @ManyToMany
-        @JoinTable(name = "users_gyms",
+        @JoinTable(name = "user_gym",
                 joinColumns = @JoinColumn(name = "id_gym"),
                 inverseJoinColumns = @JoinColumn(name = "id_user")
         )
