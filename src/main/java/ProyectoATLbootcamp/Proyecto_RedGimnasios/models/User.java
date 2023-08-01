@@ -9,7 +9,7 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,6 +41,12 @@ public class User {
     private String password;
 
     @JsonIgnore
-    @ManyToMany(mappedBy = "user")
+    @ManyToMany(mappedBy = "users")
     private List<Gym> gyms;
+
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "users")
+    private List<Role> roles;
+
 }
