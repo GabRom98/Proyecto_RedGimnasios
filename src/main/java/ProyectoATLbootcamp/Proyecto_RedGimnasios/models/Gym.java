@@ -15,5 +15,9 @@ public class Gym {
         @Column(name = "name")
         private String name;
 
+        @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+        @JoinColumn(name = "id_suscription_type")
+        private SuscriptionType suscription_type;
 
+        //Faltaría la relación id_address
 }
