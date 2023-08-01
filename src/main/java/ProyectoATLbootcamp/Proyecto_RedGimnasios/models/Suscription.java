@@ -24,5 +24,11 @@ public class Suscription {
     @Column(name = "is_active", nullable = false)
     private Boolean is_active;
 
-    //Faltan relaciones id_suscription_type - id_user
+    @OneToOne
+    @JoinColumn(name = "id_user", nullable = false)
+    private User user;
+
+    @OneToOne
+    @JoinColumn(name = "suscription_type", nullable = false)
+    private SuscriptionType suscriptionType;
 }
