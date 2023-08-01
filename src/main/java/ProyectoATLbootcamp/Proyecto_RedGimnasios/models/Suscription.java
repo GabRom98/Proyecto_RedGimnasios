@@ -27,4 +27,8 @@ public class Suscription {
     @OneToOne
     @JoinColumn(name = "id_user", nullable = false)
     private User user;
+
+    @OneToOne
+    @JoinColumn(name = "suscription_type", nullable = false)
+    private SuscriptionType suscriptionType;
 }
