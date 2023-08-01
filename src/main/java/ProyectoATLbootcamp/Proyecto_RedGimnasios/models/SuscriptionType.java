@@ -22,4 +22,5 @@ public class SuscriptionType {
     @Column(name = "price", nullable = false)
     private String price;
 
+
 }
