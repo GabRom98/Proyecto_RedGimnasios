@@ -1,9 +1,12 @@
 package ProyectoATLbootcamp.Proyecto_RedGimnasios.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "user")
@@ -36,4 +39,8 @@ public class User {
 
     @Column(name = "password")
     private String password;
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "user")
+    private List<Gym> gyms;
 }
