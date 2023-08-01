@@ -19,6 +19,10 @@ public class Gym {
         @Column(name = "name")
         private String name;
 
+        @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+        @JoinColumn(name = "id_suscription_type")
+        private SuscriptionType suscription_type;
+        
         @JsonIgnore
         @ManyToMany
         @JoinTable(name = "users_gyms",
