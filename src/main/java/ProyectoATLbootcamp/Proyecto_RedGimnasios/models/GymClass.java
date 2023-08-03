@@ -15,6 +15,11 @@ public class GymClass {
     @Column(name = "id")
     private Long id;
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @JoinColumn(name = "id_activity", nullable = false)
+    private Activity idActivity;
+
+
     @Column(name = "day")
     private char day;
 
