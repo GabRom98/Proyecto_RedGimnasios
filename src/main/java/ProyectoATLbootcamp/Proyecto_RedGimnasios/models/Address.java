@@ -27,7 +27,7 @@ public class Address {
     @Column(name = "extra_information")
     private String extraInformation;
 
-    @OneToOne
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinColumn(name = "id_province", nullable = false)
     private Province province;
 }
