@@ -1,6 +1,6 @@
 package ProyectoATLbootcamp.Proyecto_RedGimnasios.services;
 
-import ProyectoATLbootcamp.Proyecto_RedGimnasios.models.GymActivity;
+import ProyectoATLbootcamp.Proyecto_RedGimnasios.repository.GymActivityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
 public class GymActivityService {
 
     @Autowired
-    GymActivity gymActivity;
+    GymActivityRepository gymActivityRepository;
 
 }
