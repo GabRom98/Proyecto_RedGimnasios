@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "suscription_type")
+@Table(name = "subscription_type")
 public class SuscriptionType {
 
     @Id

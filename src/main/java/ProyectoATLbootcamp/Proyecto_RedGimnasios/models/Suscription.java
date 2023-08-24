@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "suscriptions")
+@Table(name = "subscriptions")
 public class Suscription {
 
     @Id
@@ -15,10 +15,10 @@ public class Suscription {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "start_suscription", nullable = false)
+    @Column(name = "start_subscription", nullable = false)
     private Date start_suscription;
 
-    @Column(name = "end_suscription",nullable = false)
+    @Column(name = "end_subscription",nullable = false)
     private Date end_suscription;
 
     @Column(name = "is_active", nullable = false)
@@ -28,7 +28,7 @@ public class Suscription {
     @JoinColumn(name = "id_user", nullable = false)
     private User user;
 
-    @OneToOne
-    @JoinColumn(name = "suscription_type", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "subscription_type", nullable = false)
     private SuscriptionType suscriptionType;
 }
