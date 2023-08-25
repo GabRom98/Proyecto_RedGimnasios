@@ -1,5 +1,6 @@
 package ProyectoATLbootcamp.Proyecto_RedGimnasios.services;
 
+import ProyectoATLbootcamp.Proyecto_RedGimnasios.models.Activity;
 import ProyectoATLbootcamp.Proyecto_RedGimnasios.models.GymActivity;
 import ProyectoATLbootcamp.Proyecto_RedGimnasios.repository.GymActivityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,10 @@ public class GymActivityService {
 
     public GymActivity findOneGymActivity(Long id){
         return gymActivityRepository.findById(id).orElse(null);
+    }
+
+    public List<Activity> findActivitiesByGym(Long idGym){
+        return (List<Activity>) gymActivityRepository.findAllActivitiesByGym(idGym);
     }
 
     public GymActivity createGymActivity(GymActivity gymActivity){

@@ -1,5 +1,6 @@
 package ProyectoATLbootcamp.Proyecto_RedGimnasios.controllers;
 
+import ProyectoATLbootcamp.Proyecto_RedGimnasios.models.Activity;
 import ProyectoATLbootcamp.Proyecto_RedGimnasios.models.GymActivity;
 import ProyectoATLbootcamp.Proyecto_RedGimnasios.services.GymActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,11 @@ public class GymActivityController {
     @GetMapping("gymActivities/{id}")
     public GymActivity getGymActivityById(@PathVariable Long id){
         return gymActivityService.findOneGymActivity(id);
+    }
+
+    @GetMapping("gymActivities/activitiesByGym/{idGym}")
+    public List<Activity> getActivitiesByGym(@PathVariable Long idGym){
+        return gymActivityService.findActivitiesByGym(idGym);
     }
 
     @PostMapping("gymActivities")
