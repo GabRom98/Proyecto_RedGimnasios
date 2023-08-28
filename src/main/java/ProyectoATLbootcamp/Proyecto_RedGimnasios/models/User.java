@@ -40,13 +40,15 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @JsonIgnore
-    @ManyToMany(mappedBy = "users")
-    private List<Gym> gyms;
-
-
-    @JsonIgnore
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @JoinTable(
+            name = "users_roles",joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id")
+    )
     private List<Role> roles;
+
+    @JsonIgnore
+    @Transient  // No persiste en la base de datos
+    private List<Long> rolSelectorId;
 
 }

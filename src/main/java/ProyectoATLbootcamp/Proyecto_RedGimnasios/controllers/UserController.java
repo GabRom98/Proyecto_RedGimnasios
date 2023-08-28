@@ -1,5 +1,6 @@
 package ProyectoATLbootcamp.Proyecto_RedGimnasios.controllers;
 
+import ProyectoATLbootcamp.Proyecto_RedGimnasios.DTO.UserDTO;
 import ProyectoATLbootcamp.Proyecto_RedGimnasios.models.User;
 import ProyectoATLbootcamp.Proyecto_RedGimnasios.services.UserService;
 import ProyectoATLbootcamp.Proyecto_RedGimnasios.utils.JWTUtil;
@@ -27,7 +28,6 @@ public class UserController {
 
     @PostMapping("/api/users")
     public void registerU(@RequestBody User user) {
-
         Argon2 argon2 = Argon2Factory.create(Argon2Factory.Argon2Types.ARGON2id);
         String hash = argon2.hash(2, 1024, 1, user.getPassword());
 
@@ -37,11 +37,11 @@ public class UserController {
     }
 
     @GetMapping("/api/users")
-    public List<User> getAllU(@RequestHeader(value = "Authorization") String token){
-        if (!validarToken(token)){
+    public List<UserDTO> getAllU(/*@RequestHeader(value = "Authorization") String token*/){
+/*        if (!validarToken(token)){
             return null;
-        }
-       return userService.getAllUsers();
+        }*/
+       return userService.getAllUsersWithRoles();
     }
 
     @GetMapping("/api/users/{id}")

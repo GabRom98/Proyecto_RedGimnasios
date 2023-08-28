@@ -22,13 +22,7 @@ public class Role {
     @Column(name = "description")
     private String description;
 
-
-    @JsonIgnore
-    @ManyToMany
-    @JoinTable(name = "user_role",
-            joinColumns = @JoinColumn(name = "id_role"),
-            inverseJoinColumns = @JoinColumn(name = "id_user")
-    )
+    @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
     private List<User> users;
 
 }
