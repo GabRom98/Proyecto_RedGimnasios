@@ -25,7 +25,7 @@ public class User {
     @Column(name = "phone")
     private String phone;
 
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     private String email;
 
     @Column(name = "dni", unique = true)
@@ -35,7 +35,7 @@ public class User {
     private Date birthdate;
 
     @Column(name = "is_active")
-    private boolean is_active;
+    private boolean is_active = true;
 
     @Column(name = "password")
     private String password;
