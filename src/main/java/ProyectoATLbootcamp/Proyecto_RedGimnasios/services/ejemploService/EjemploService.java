@@ -23,7 +23,7 @@ public class EjemploService implements EjemploInterface{
 
         EjemploValidator ejemploValidator= new EjemploValidator();
         if(ejemploValidator.isValidate(gym) == false){
-            return "La cantidad de caracteres es muy alta para el nombre";
+            return "La cantidad de caracteres es muy larga para el nombre";
         }
 
         ejemploRepository.agregar(modelEjemplo);
