@@ -12,39 +12,57 @@
 
 
 
-## ENTITY RELATIONSHIP
-
-1. A **schedule** have many **days** (_1_M_)
-1. A **schedule** have many **times** (_1_M_)
-1. A **customer** make one **suscription** (_1_1_)
-1. Many **traineers** have many **schedule** and many **activities** (_M_M_)
-1. Many **traineer** have many **roles** (_M_M_)
-1. Many **gyms** have many **traineers** (_M_M_)
-1. A **gym** have one **address** (_1_1_)
-1. A **address** have one **provinces** (_1_1_)
-1. A **gym** have many **administratives** (_1_M_)
-1. A **suscription** have one **suscription_type** (_1_1_)
-1. A **suscription** have one **customer** (_1_1_)
-1. A **customer** have one **login** (_1_1_)
-
-
-
 ## ENTITY RELATIONSHIP MODEL
 
-![ERD](https://github.com/GabRom98/Proyecto_RedGimnasios/assets/101473902/ba52d529-a4e7-4bfb-b41e-0a24b17691b6)
+![ERD](https://github.com/GabRom98/Proyecto_RedGimnasios/assets/101473902/1efa8a6e-8ea8-4473-9845-b488e13b1106)
 
 
 
 ## ENDPOINTS
 
-| Método   |   Route                | Descripción                                  |
-|----------|------------------------|----------------------------------------------|
-| GET      |  /api/users            | Get All Users                                |
-| GET      |  /api/users/{id}       | Get a User                                   |
-| POST     |  /api/users            | Register a User                              |
-| PUT      |  /api/users            | Update a User                                |
-| PUT      |  /api/user-active/{id} | Actualiza datos en el servidor.              |
-| DELETE   |  /api/users/{id}       | Delete a User                                |
+| Método   |   Route                                          | Descripción                                                   |
+|----------|--------------------------------------------------|---------------------------------------------------------------|
+| GET      |  /api/users                                      | Get All Users                                                 |
+| GET      |  /api/users/{id}                                 | Get one User                                                  |
+| POST     |  /api/users                                      | Register one User                                             |
+| PUT      |  /api/users                                      | Update one User                                               |
+| PUT      |  /api/user-active/{id}                           | Update one User                                               |
+| GET      |  /api/gimnasio/suscriptionstypes/{id}            | Get a Suscription Type                                        |
+| GET      |  /api/gimnasio/suscriptionstypes                 | Get All Suscriptions Types                                    |
+| POST     |  /api/gimnasio/suscriptionstypes                 | Register one Suscription Type                                 |
+| PUT      |  /api/gimnasio/suscriptionstypes/{id}            | Update one Suscription Type                                   |
+| DELETE   |  /api/gimnasio/suscriptions                      | Delete one Suscription Type                                   |
+| GET      |  /api/gimnasio/suscriptions/{userID}/true        | Get one Suscription                                           |
+| GET      |  /api/gimnasio/suscriptions                      | Get All Suscriptions                                          |
+| POST     |  /api/gimnasio/suscriptions                      | Register one Suscription                                      |
+| PUT      |  /api/gimnasio/suscriptions                      | Update one Suscription                                        |
+| DELETE   |  /api/gimnasio/suscriptions/{userID}/true        | Delete one Suscription                                        |
+| PUT      |  /api/gimnasio/suscriptions/{userID}/true        | Update one Suscription                                        |
+| PUT      |  /api/gimnasio/suscriptions/{userID}/true        | Update one Suscription                                        |
+| GET      |  /api/roles                                      | Get All Roles                                                 |
+| GET      |  /api/roles/{id}                                 | Get one Role                                                  |
+| POST     |  /api/roles                                      | Register one Role                                             |
+| PUT      |  /api/roles                                      | Update one Role                                               |
+| DELETE   |  /api/roles/{id}                                 | Delete one Role                                               |
+| GET      |  /api/gimnasio/province/                         | Get All Provinces                                             |
+| GET      |  /api/gimnasio/province/{id}                     | Get one Province                                              |
+| POST     |  /api/gimnasio/province                          | Register one Provinces                                        |
+| DELETE   |  /api/gimnasio/province/{id}                     | Update one Provinces                                          |
+| GET      |  /api/gymActivities/                             | Get All Gym Activities                                        |
+| GET      |  /api/gymActivities/{id}                         | Get one Gym Activity                                          |
+| GET      |  /api/gymActivities/{idGym}                      | Get Gym Activities by Gym Id                                  |
+| POST     |  /api/gymActivities/                             | Register one User                                             |
+| PUT      |  /api/gymActivities/{id}                         | Update one Gym Activity                                       |
+| DELETE   |  /api/gymActivities/{id}                         | Delete one Gym Activity                                       |
+| POST     |  /api/login/                                     | Log In                                                        |
+| GET      |  /api/gimnasio/address                           | Get All Address                                               |
+| POST     |  /api/gimnasio/address                           | Register one Address                                          |
+| GET      |  /api/gimnasio/address{id}                       | Get one Address                                               |
+| DELETE   |  /api/gimnasio/address{id}                       | Delete one Address                                            |
+| GET      |  /api/gimnasio/activity                          | Get All Activities                                            |
+| POST     |  /api/gimnasio/activity                          | Register one Activitie                                        |
+| GET      |  /api/gimnasio/activity/{id}                     | Get one Activitie                                             |
+| DELETE   |  /api/gimnasio/activity/{id}                     | Delete one Activitie                                          |
 
 
 
