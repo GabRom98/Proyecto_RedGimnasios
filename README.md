@@ -32,13 +32,13 @@
 | POST     |  /api/gimnasio/suscriptionstypes                 | Register one Suscription Type                                 |
 | PUT      |  /api/gimnasio/suscriptionstypes/{id}            | Update one Suscription Type                                   |
 | DELETE   |  /api/gimnasio/suscriptions                      | Delete one Suscription Type                                   |
-| GET      |  /api/gimnasio/suscriptions/{userID}/true        | Get one Suscription                                           |
+| GET      |  /api/gimnasio/suscriptions/{userID}             | Get one Suscription                                           |
 | GET      |  /api/gimnasio/suscriptions                      | Get All Suscriptions                                          |
 | POST     |  /api/gimnasio/suscriptions                      | Register one Suscription                                      |
 | PUT      |  /api/gimnasio/suscriptions                      | Update one Suscription                                        |
-| DELETE   |  /api/gimnasio/suscriptions/{userID}/true        | Delete one Suscription                                        |
+| DELETE   |  /api/gimnasio/suscriptions/{userID}             | Delete one Suscription                                        |
 | PUT      |  /api/gimnasio/suscriptions/{userID}/true        | Update one Suscription                                        |
-| PUT      |  /api/gimnasio/suscriptions/{userID}/true        | Update one Suscription                                        |
+| PUT      |  /api/gimnasio/suscriptions/{userID}/false       | Update one Suscription                                        |
 | GET      |  /api/roles                                      | Get All Roles                                                 |
 | GET      |  /api/roles/{id}                                 | Get one Role                                                  |
 | POST     |  /api/roles                                      | Register one Role                                             |
